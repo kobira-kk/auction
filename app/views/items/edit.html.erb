@@ -1,0 +1,37 @@
+<h1>商品更新フォーム</h1>
+<%= form_with model: @item, local: true, url: {action: :update} do |form| %>
+<P>
+  商品名:<br>
+    <%= form.text_field :name %>
+</P>
+
+<P>
+  商品詳細:<br>
+    <%= form.text_area :description %>
+</P>
+
+<P>
+  価格:<br>
+    <%= form.number_field :price %>
+</P>
+
+<P>
+  売り手:<br>
+    <%= form.number_field :seller_id %>
+</P>
+
+<P>
+  電子メール:<br>
+    <%= form.text_field :email %>
+</P>
+
+<P>
+  商品画像URL:<br>
+    <%= form.text_area :image_url %>
+</P>
+
+<%= form.submit "更新" %>
+
+<a href="/items">戻る</a>
+
+<% end %>
